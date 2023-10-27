@@ -3,3 +3,15 @@
   font-size: 40px;
   background-color: darkkhaki;
 }
+
+.fundo-vermelho {
+  background-color: red;
+}
+
+.negrito {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 20px;
+}

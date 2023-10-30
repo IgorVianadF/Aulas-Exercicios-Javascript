@@ -1,17 +1,26 @@
-#Texto1 {
+#Atividade {
   font-family: "Times New Roman", Times, serif;
   font-size: 40px;
   background-color: darkkhaki;
+  margin-bottom: 20px;
+  display: block;
 }
 
-.fundo-vermelho {
-  background-color: red;
+.fundo-cinza {
+  background-color: rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .negrito {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 20px;
+.header1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
 }

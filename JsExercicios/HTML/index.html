@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <title>Um pouco de CSS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header1">
+    <h1>CSS</h1>
+  </div>
+  <span id="Atividade">Atividades</span>
+  <nav>
+    <span class="fundo-cinza negrito"
+      ><a wm-link="/JsExercicios/HTML/pouco-de-css2.html">Texto1</a></span
+    >
+    <span class="fundo-cinza" wm-link="/JsExercicios/HTML/Exercícios/temp.html"
+      >Headers</span
+    >
+    <span class="fundo-cinza" wm-link="/JsExercicios/HTML/Exercícios/texto.html"
+      >Tags semanticas</span
+    >
+    <span
+      class="fundo-cinza"
+      wm-link="/JsExercicios/HTML/Exercícios/listas.html"
+      >Listas</span
+    >
+    <span
+      class="fundo-cinza"
+      wm-link="/JsExercicios/HTML/Exercícios/listaAninhada.html"
+      >Listas aninhadas</span
+    >
+    <span class="fundo-cinza" wm-link="/JsExercicios/HTML/Exercícios/links.html"
+      >Links</span
+    >
+  </nav>
+  <section id="conteudo"></section>
+  <!--Texto-->
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+    dignissimos nesciunt expedita eius sit voluptate esse quaerat odit iste
+    suscipit.
+  </p>
+  <script>
+    document.querySelectorAll("[wm-link]").forEach((link) => {
+      const conteudo = document.getElementById("conteudo");
+      link.onclick = function (e) {
+        e.preventDefault();
+        fetch(link.getAttribute("wm-link"))
+          .then((resp) => resp.text())
+          .then((html) => (conteudo.innerHTML = html));
+      };
+    });
+  </script>
+</body>

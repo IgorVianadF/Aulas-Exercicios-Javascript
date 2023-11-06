@@ -6,11 +6,19 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://specificity.keegan.st/ */
+
+        body{font-size: 40px;} /*mais básico*/
+        
+        div{background-color: blue;color: white;}/*mais específico que apenas o body*/
+        div:hover{background-color: purple;}/*mais específico que os dois acima, porém a mesma especificidade que o de baixo, então quem ganha é quem está por último*/
+        div[wm-cor]{background-color: darkorange;} /*mais específico por  ter uma tag*/
+        div.estilo{background-color: green;} /*tão específico quanto uma tag, quem ganha é quem vier por último*/
+        #unico1, #unico2 {background-color: black;} /*id's sempre ganham de classes e pseudo classes*/
     </style>
 </head>
 
 <body>
-    <div id="unico1" class="estilo">
+    <div id="unico1" class="estilo" style="background-color: brown;"> <!--Estilos inline são os mais específicos-->
         #unico1 vs .estilo vs inline
     </div>
     <div id="unico2" class="estilo">#unico2 vs .estilo</div>

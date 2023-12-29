@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='UTF-8'>
+  <head>
+    <meta charset="UTF-8" />
     <title>Modificando HTML #02</title>
-    <link rel='stylesheet' href='css/estilo.css'>
-</head>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
 
-<body class='conteudo exercicio'>
+  <body class="conteudo exercicio">
     <div>
-        <p>Texto Inicial</p>
+      <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+      const div = document.querySelector("div");
+      div.insertAdjacentHTML("beforebegin", "<p>Antes</p>");
+      div.insertAdjacentHTML("afterend", "<p>Depois</p>");
+      console.log(div.innerHTML);
+      console.log(div.innerText);
     </script>
-</body>
-
+  </body>
 </html>
